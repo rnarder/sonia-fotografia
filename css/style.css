@@ -51,6 +51,7 @@ body {
     color: var(--color-accent);
 }
 
+/* Desktop Navigation */
 .nav-links {
     display: flex;
     list-style: none;
@@ -69,6 +70,95 @@ body {
 
 .nav-links a:hover {
     color: var(--color-accent);
+}
+
+/* Mobile Navigation - Hamburger Menu */
+.nav-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 1001;
+}
+
+.hamburger {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--color-black);
+    position: relative;
+    transition: var(--transition);
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background: var(--color-black);
+    transition: var(--transition);
+}
+
+.hamburger::before {
+    top: -7px;
+}
+
+.hamburger::after {
+    top: 7px;
+}
+
+/* Hamburger Animation when Active */
+.nav-toggle[aria-expanded="true"] .hamburger {
+    background: transparent;
+}
+
+.nav-toggle[aria-expanded="true"] .hamburger::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.nav-toggle[aria-expanded="true"] .hamburger::after {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+/* Mobile Menu Styles */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem 1.5rem;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        max-width: 300px;
+        height: 100vh;
+        background: var(--color-white);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        padding: 2rem;
+        transition: right 0.3s ease;
+        box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links a {
+        font-size: 1.1rem;
+        color: var(--color-black);
+    }
 }
 
 /* Hero */
@@ -319,30 +409,12 @@ body {
 }
 
 .footer-copyright {
-    color: var(--color-gray);
-    font-size: 0.8rem;
-}
+    color: var(--color-gray); font-size: 0.8rem; }
 
 /* Responsive */
 @media (max-width: 768px) {
-    .hero-title {
-        font-size: 2.5rem;
-    }
-    
-    .hero-subtitle {
-        font-size: 1rem;
-    }
-    
-    .nav-links {
-        gap: 1.5rem;
-    }
-    
-    .servicios-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .section-title,
-    .cta-title {
-        font-size: 2rem;
-    }
+    .hero-title { font-size: 2.5rem; }
+    .hero-subtitle { font-size: 1rem; }
+    .servicios-grid { grid-template-columns: 1fr; }
+    .section-title, .cta-title { font-size: 2rem; }
 }
