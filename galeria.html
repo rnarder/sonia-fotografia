@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería | Sonia Fotografía</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/galeria.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Sonia<span class="accent">.</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="galeria.html" class="active">Galería</a></li>
+            <li><a href="sobre.html">Sobre mí</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <header class="page-header">
+        <h1 class="page-title">Galería</h1>
+        <p class="page-subtitle">Un vistazo a mi trabajo</p>
+    </header>
+
+    <section class="gallery-section">
+        <div class="container">
+            <div class="gallery-tabs">
+                <button class="tab-btn active" data-category="all">Todo</button>
+                <button class="tab-btn" data-category="inmuebles">Inmuebles</button>
+                <button class="tab-btn" data-category="familias">Familias</button>
+                <button class="tab-btn" data-category="bodas">Bodas</button>
+            </div>
+
+            <div class="gallery-grid">
+                <!-- Inmuebles -->
+                <div class="gallery-item" data-category="inmuebles">
+                    <img src="https://images.unsplash.com/photo-1600596542815-93e8781692ee?w=800&q=80" alt="Apartamento moderno" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Apartamento Eixample</h3>
+                        <p>Inmuebles</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="inmuebles">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80" alt="Casa con jardín" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Casa familiar</h3>
+                        <p>Inmuebles</p>
+                    </div>
+                </div>
+
+                <!-- Familias -->
+                <div class="gallery-item" data-category="familias">
+                    <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?w=800&q=80" alt="Familia feliz" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Sesión familiar</h3>
+                        <p>Familias</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="familias">
+                    <img src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w=800&q=80" alt="Padre e hija" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Momentos especiales</h3>
+                        <p>Familias</p>
+                    </div>
+                </div>
+
+                <!-- Bodas -->
+                <div class="gallery-item" data-category="bodas">
+                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80" alt="Pareja de novios" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Boda en la playa</h3>
+                        <p>Bodas</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="bodas">
+                    <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=800&q=80" alt="Detalles de boda" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Detalles únicos</h3>
+                        <p>Bodas</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Sonia<span class="accent">.</span></div>
+                <div class="footer-links">
+                    <a href="mailto:sonia@fotografia.com">sonia@fotografia.com</a>
+                </div>
+                <div class="footer-copyright">
+                    © 2025 Sonia Fotografía. Todos los derechos reservados.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/galeria.js"></script>
+</body>
+</html>
