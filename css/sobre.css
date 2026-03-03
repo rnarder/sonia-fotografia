@@ -77,13 +77,33 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+    .about-section {
+        overflow-x: hidden;
+        padding: 2rem 1rem;
+    }
+    
     .about-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
     
+    .about-title {
+        font-size: 1.8rem;
+    }
+    
+    .about-text {
+        font-size: 1rem;
+    }
+    
     .about-stats {
-        gap: 2rem;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .stat {
+        min-width: 120px;
+        text-align: center;
     }
     
     .about-image::after {

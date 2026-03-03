@@ -413,8 +413,10 @@ body {
 
 /* Responsive */
 @media (max-width: 768px) {
+    html, body { overflow-x: hidden; }
     .hero-title { font-size: 2.5rem; }
     .hero-subtitle { font-size: 1rem; }
     .servicios-grid { grid-template-columns: 1fr; }
     .section-title, .cta-title { font-size: 2rem; }
+    .container { padding: 0 1rem; }
 }
