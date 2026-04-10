@@ -350,10 +350,67 @@ body {
     opacity: 0.9;
 }
 
-/* CTA */
+/* Process / Trust / FAQ / CTA */
+.process-section,
+.trust-section,
+.faq-section,
 .cta {
     padding: 8rem 2rem;
+}
+
+.process-section,
+.faq-section {
+    background: var(--color-white);
+}
+
+.trust-section,
+.cta {
     background: var(--color-cream);
+}
+
+.process-grid,
+.trust-grid,
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+}
+
+.process-card,
+.trust-item,
+.faq-item {
+    background: var(--color-white);
+    padding: 2rem;
+    border-radius: 4px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+}
+
+.process-step {
+    display: inline-block;
+    margin-bottom: 1rem;
+    font-size: 0.85rem;
+    letter-spacing: 0.15em;
+    color: var(--color-accent);
+}
+
+.process-card h3,
+.trust-item h3,
+.faq-item h3 {
+    font-family: var(--font-serif);
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
+    font-weight: 400;
+}
+
+.process-card p,
+.trust-item p,
+.faq-item p,
+.cta-text {
+    color: var(--color-gray-light);
+    font-size: 1.05rem;
+}
+
+.cta {
     text-align: center;
 }
 
@@ -365,8 +422,6 @@ body {
 }
 
 .cta-text {
-    color: var(--color-gray-light);
-    font-size: 1.1rem;
     margin-bottom: 2rem;
 }
 
