@@ -123,16 +123,30 @@ if (contactForm) {
                 throw new Error('Formspree request failed');
             }
 
+            const redirectToThanks = () => {
+                this.reset();
+                window.location.href = 'gracias.html';
+            };
+
             if (typeof gtag === 'function') {
+                let redirected = false;
+                const safeRedirect = () => {
+                    if (redirected) return;
+                    redirected = true;
+                    redirectToThanks();
+                };
+
                 gtag('event', 'generate_lead', {
                     event_category: 'contact',
                     event_label: 'contact_form',
-                    value: 1
+                    value: 1,
+                    event_callback: safeRedirect
                 });
-            }
 
-            this.reset();
-            window.location.href = 'gracias.html';
+                setTimeout(safeRedirect, 800);
+            } else {
+                redirectToThanks();
+            }
         } catch (error) {
             if (status) {
                 status.textContent = 'Hubo un problema al enviar. Inténtalo de nuevo en un momento.';
