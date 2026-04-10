@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://soniawaleska.com/sitemap.xml
+Sitemap: https://www.soniawaleska.com/sitemap.xml
