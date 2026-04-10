@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Sonia Waleska Fotografía">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f8f5ef"/>
+      <stop offset="100%" stop-color="#efe7d6"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="918" cy="225" r="160" fill="none" stroke="#d4af37" stroke-width="3" opacity="0.55"/>
+  <circle cx="918" cy="225" r="54" fill="#d4af37" opacity="0.92"/>
+  <circle cx="918" cy="225" r="110" fill="none" stroke="#1a1a1a" stroke-width="2" opacity="0.15"/>
+  <text x="90" y="245" fill="#1a1a1a" font-size="86" font-family="Georgia, 'Times New Roman', serif">Sonia Waleska</text>
+  <text x="90" y="315" fill="#9b7c17" font-size="34" font-family="Arial, Helvetica, sans-serif" letter-spacing="6">FOTOGRAFÍA EN BARCELONA</text>
+  <text x="90" y="402" fill="#333333" font-size="38" font-family="Arial, Helvetica, sans-serif">Bodas, familias, retratos e inmuebles</text>
+  <text x="90" y="462" fill="#555555" font-size="28" font-family="Arial, Helvetica, sans-serif">Mirada natural, elegante y cercana</text>
+  <rect x="90" y="506" width="270" height="2" fill="#d4af37"/>
+</svg>
