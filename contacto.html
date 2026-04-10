@@ -53,9 +53,8 @@
                 </div>
 
                 <div class="contact-form-wrapper">
-                    <form class="contact-form" action="https://formspree.io/f/mykbqjbq" method="POST">
+                    <form class="contact-form" id="contact-form" action="https://formspree.io/f/mykbqjbq" method="POST">
                         <input type="hidden" name="_subject" value="Nuevo mensaje desde soniawaleska.com">
-                        <input type="hidden" name="_next" value="https://soniawaleska.com/gracias.html">
 
                         <div class="form-group honeypot-field" aria-hidden="true">
                             <label for="website">Si eres humano, deja este campo vacío</label>
@@ -94,6 +93,7 @@
                         </div>
                         
                         <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+                        <p class="form-status" id="form-status" aria-live="polite"></p>
                     </form>
                 </div>
             </div>

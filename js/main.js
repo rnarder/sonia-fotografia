@@ -81,12 +81,70 @@ document.querySelectorAll('.servicio-card, .gallery-item').forEach(el => {
 });
 
 // Form submission handling
-document.querySelectorAll('form').forEach(form => {
-    form.addEventListener('submit', function(e) {
+const contactForm = document.querySelector('#contact-form');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', async function (e) {
+        e.preventDefault();
+
         const btn = this.querySelector('button[type="submit"]');
+        const status = document.querySelector('#form-status');
+        const honeypot = this.querySelector('input[name="website"]');
+        const originalText = btn ? btn.textContent : '';
+
+        if (honeypot && honeypot.value.trim() !== '') {
+            if (status) {
+                status.textContent = 'No se pudo enviar el formulario.';
+                status.classList.add('is-error');
+            }
+            return;
+        }
+
         if (btn) {
             btn.textContent = 'Enviando...';
             btn.disabled = true;
         }
+
+        if (status) {
+            status.textContent = '';
+            status.classList.remove('is-error');
+        }
+
+        try {
+            const response = await fetch(this.action, {
+                method: 'POST',
+                body: new FormData(this),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if (!response.ok) {
+                throw new Error('Formspree request failed');
+            }
+
+            this.reset();
+            window.location.href = 'gracias.html';
+        } catch (error) {
+            if (status) {
+                status.textContent = 'Hubo un problema al enviar. Inténtalo de nuevo en un momento.';
+                status.classList.add('is-error');
+            }
+
+            if (btn) {
+                btn.textContent = originalText || 'Enviar mensaje';
+                btn.disabled = false;
+            }
+        }
     });
-});
+} else {
+    document.querySelectorAll('form').forEach(form => {
+        form.addEventListener('submit', function () {
+            const btn = this.querySelector('button[type="submit"]');
+            if (btn) {
+                btn.textContent = 'Enviando...';
+                btn.disabled = true;
+            }
+        });
+    });
+}
