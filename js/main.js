@@ -123,6 +123,14 @@ if (contactForm) {
                 throw new Error('Formspree request failed');
             }
 
+            if (typeof gtag === 'function') {
+                gtag('event', 'generate_lead', {
+                    event_category: 'contact',
+                    event_label: 'contact_form',
+                    value: 1
+                });
+            }
+
             this.reset();
             window.location.href = 'gracias.html';
         } catch (error) {
