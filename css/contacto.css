@@ -104,6 +104,14 @@
     min-height: 120px;
 }
 
+.honeypot-field {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .contact-grid {

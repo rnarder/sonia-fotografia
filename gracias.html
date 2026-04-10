@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gracias | Sonia Fotografía</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        .thanks-section {
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4rem 2rem;
+        }
+        .thanks-card {
+            max-width: 720px;
+            text-align: center;
+            background: var(--color-cream);
+            padding: 3rem;
+            border-radius: 4px;
+        }
+        .thanks-card h1 {
+            font-family: var(--font-serif);
+            font-size: clamp(2.2rem, 5vw, 3.5rem);
+            margin-bottom: 1rem;
+            font-weight: 400;
+        }
+        .thanks-card p {
+            color: var(--color-gray-light);
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Sonia<span class="accent">.</span></div>
+        <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+            <span class="hamburger"></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="galeria.html">Galería</a></li>
+            <li><a href="sobre.html">Sobre mí</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <section class="thanks-section">
+        <div class="thanks-card">
+            <h1>Gracias por escribir ✨</h1>
+            <p>Tu mensaje ha sido enviado correctamente. Sonia te responderá lo antes posible para hablar sobre tu sesión, evento o proyecto.</p>
+            <a href="index.html" class="btn btn-primary">Volver al inicio</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Sonia<span class="accent">.</span></div>
+                <div class="footer-copyright">
+                    © 2026 Sonia Fotografía. Todos los derechos reservados.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
