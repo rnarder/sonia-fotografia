@@ -149,7 +149,7 @@
 
     .contact-info {
         padding: 0;
-        text-align: center;
+        text-align: left;
     }
 
     .contact-title {
@@ -161,7 +161,7 @@
     }
 
     .contact-details {
-        align-items: center;
+        align-items: stretch;
     }
 
     .contact-item {
