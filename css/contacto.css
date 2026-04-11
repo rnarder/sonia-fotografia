@@ -136,6 +136,7 @@
     
     .contact-info {
         padding-right: 0;
+        text-align: center;
     }
 
     .contact-title {
@@ -144,6 +145,17 @@
 
     .contact-text {
         font-size: 1rem;
+    }
+
+    .contact-details {
+        align-items: center;
+    }
+
+    .contact-item {
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+        text-align: left;
     }
     
     .contact-form-wrapper {
